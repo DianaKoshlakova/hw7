@@ -15,3 +15,17 @@
 # **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да    
 #     **Вывод:** Парам пам-пам  
 
+poem = 'пара-ра-рам рам-пам-пам-папам па-ра-па-да'
+
+str = poem.split()
+res = set()
+for word in str :
+    count = 0
+    for i in word :
+        if i in 'аеёиоуэюяы' :
+            count += 1
+    res.add(count)
+if len(res) == 1 :
+    print("Парам пам пам!")
+else :
+    print("Пам парам")
